@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Sentiment Analysis Results</title>
+</head>
+<body>
+    <h2>Sentiment Analysis Summary</h2>
+     <!-- Print Button -->
+     <button onclick="window.print()">Print Report</button>
+    <div>{{ summary|safe }}</div>
+
+    <!-- Display the plot -->
+    <h2>Summary Plot</h2>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Sentiment Analysis Plot">
+
+    <h2>Detailed Results</h2>
+    {% for table in tables %}
+        {{ titles[loop.index] }}
+        {{ table|safe }}
+    {% endfor %}
+</body>
+</html>
