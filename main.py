@@ -24,7 +24,9 @@ app = Flask(__name__)
 # model_save_path = "https://storage.cloud.google.com/imdb_bert_based_model/bert_imdb_model.bin"
 model_save_path = "bert_imdb_model.bin"
 model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
-model.load_state_dict(torch.load(model_save_path))
+#model.load_state_dict(torch.load(model_save_path))
+model.load_state_dict(torch.load(model_save_path), strict=False)
+
 model.eval()
 
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
@@ -112,5 +114,10 @@ def upload_file_post():
 
 #         return render_template('result.html', tables=[data.to_html(classes='data')], titles=data.columns.values, summary=summary)
 
+# if __name__ == '__main__':
+#    app.run(debug=True)
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
+
+
