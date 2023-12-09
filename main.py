@@ -80,7 +80,7 @@ def upload_file_post():
 
         # Generate plot
         fig, ax = plt.subplots()
-        ax.bar(sentiment_counts.keys(), sentiment_counts.values(), color=['green', 'blue'])
+        ax.bar(sentiment_counts.keys(), sentiment_counts.values(), color=['red', 'blue'])
         ax.set_ylabel('Counts')
         ax.set_title('Sentiment Analysis Summary')
         
