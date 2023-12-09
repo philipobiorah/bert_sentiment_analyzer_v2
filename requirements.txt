@@ -2,10 +2,12 @@ regex
 beautifulsoup4
 Flask
 pandas
-torch
 transformers
 matplotlib
 flask 
 request
 render_template
+torch
+
+
 
