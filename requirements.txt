@@ -5,8 +5,7 @@ pandas
 transformers
 matplotlib
 flask 
-request
-render_template
+requests
 torch
 
 
