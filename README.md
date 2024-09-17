@@ -11,3 +11,8 @@ docker build -t drphilipobiorah/bert_sentiment_analyzer:latest .
 ---To run docker example
 
 docker container run -d -p 5000:5000 drphilipobiorah/bert_sentiment_analyzer:latest 
+
+
+
+---build for another architecture
+docker build --platform linux/ppc64le -t drphilipobiorah/bert_sentiment_analyzer .
